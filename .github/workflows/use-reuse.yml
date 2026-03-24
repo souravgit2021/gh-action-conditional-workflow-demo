@@ -73,8 +73,8 @@ jobs:
     secrets: 
       # some-secret: ${{ secrets.some-secret }}
   print-deploy-result:
-  needs: deploy
-  steps:
+   needs: deploy
+   steps:
      - name: Print deploy output
        run: echo "${{ needs.deploy.outputs.result }}"
   report:
